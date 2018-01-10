@@ -6,13 +6,17 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>alert</ion-title>
+  <ion-navbar color="danger">
+    <ion-title>Alertas</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <button ion-button full (click)="openAlert()" color="light">Abrir Alerta Basica</button>
+  <button ion-button full (click)="openAlertPrompt()" color="danger"></button>
+  <button ion-button full (click)="openRadioAlert()">Abrir Alerta Radio</button>
+  <button ion-button full color="warning" (click)="openConfirmAlert()">Abrir Alerta Confirmacion</button>
+  <button ion-button full color="secondary" (click)="openCheckboxAlert()">Abrir CheckBox</button>
 </ion-content>

@@ -7,12 +7,22 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ActionsheetEjemploPage } from '../pages/actionsheet-ejemplo/actionsheet-ejemplo';
+import { AlertPage } from '../pages/alert/alert';
+import { BadgeejemploPage } from '../pages/badgeejemplo/badgeejemplo';
+import { ButtonsPage } from '../pages/buttons/buttons';
+import { CheckboxPage } from '../pages/checkbox/checkbox';
+import { CardsocialPage } from '../pages/cardsocial/cardsocial';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ActionsheetEjemploPage
+    ActionsheetEjemploPage,
+    AlertPage,
+    BadgeejemploPage,
+    ButtonsPage,
+    CheckboxPage,
+    CardsocialPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +32,12 @@ import { ActionsheetEjemploPage } from '../pages/actionsheet-ejemplo/actionsheet
   entryComponents: [
     MyApp,
     HomePage,
-    ActionsheetEjemploPage
+    ActionsheetEjemploPage,
+    AlertPage,
+    BadgeejemploPage,
+    ButtonsPage,
+    CheckboxPage,
+    CardsocialPage
   ],
   providers: [
     StatusBar,
