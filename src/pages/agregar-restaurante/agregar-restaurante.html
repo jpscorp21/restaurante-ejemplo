@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Agregar Restaurante</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit)="agregarRestaurante(formulario)"></form>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-75>
+        <ion-item>
+          <ion-label floating>Nombre</ion-label>
+          <ion-input type="text" name="nombre" ngModel required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col width-25>
+        <ion-row>
+          <button ion-button block (click)="tomarFoto()" type="button">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+        </ion-row>
+        <ion-row>
+          <button ion-button block (click)="localizar()" type="button">
+            <ion-icon name="locate"></ion-icon>
+          </button>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row *ngIf="ubicacionlista">
+      <ion-col>
+        <agm-map [latitude]="ubicacion.lat" [longitude]="ubicacion.lng" [zoom]="4" [streetViewControl]="false" [disableDefaultUI]="true">
+          <agm-marker [latitude]="ubicacion.lat" [longitude]="ubicacion.lng"></agm-marker>
+        </agm-map>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-slides>
+        <ion-slide *ngFor="let imagen of imagenes">
+          <img [src]="imagen">
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+    <ion-row style="text-align:center;">
+      <rating name="rating" ngModel></rating>
+    </ion-row>
+
+    <ion-row>
+      <button ion-button block type="submit">
+        Agregar Restaurante
+      </button>
+    </ion-row>
+  </ion-grid>
+  </form>
+</ion-content>

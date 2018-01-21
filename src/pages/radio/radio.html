@@ -1,0 +1,67 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Radios</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <form (submit)="doSubmit($event)" [formGroup]="langForm">
+    <ion-list radio-group formControlName="langs">
+
+      <ion-list-header>
+        Lenguajes
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Go</ion-label>
+        <ion-radio value="golang" checked="true"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rust</ion-label>
+        <ion-radio value="rust"></ion-radio>
+      </ion-item>      
+
+      <ion-item>
+        <ion-label>Python</ion-label>
+        <ion-radio value="python"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ruby</ion-label>
+        <ion-radio value="ruby"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Clojure</ion-label>
+        <ion-radio value="clojure"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Java</ion-label>
+        <ion-radio value="java"></ion-radio>        
+      </ion-item>
+
+      <ion-item>
+        <ion-label>PHP</ion-label>
+        <ion-radio value="php"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Scala</ion-label>
+        <ion-radio value="scala"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Erlang</ion-label>
+        <ion-radio value="erlang"></ion-radio>
+      </ion-item>
+      
+    </ion-list>
+  </form>
+
+</ion-content>

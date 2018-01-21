@@ -1,29 +1,20 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Restaurantes
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-label>Daenerys Targaryen</ion-label>
-    <ion-checkbox color="dark" checked="true"></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Arya Stark</ion-label>
-    <ion-checkbox disabled="true"></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Job Saucedo</ion-label>
-    <ion-checkbox color="warning"></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Saucedo</ion-label>
-    <ion-checkbox color="secondary"></ion-checkbox>
-  </ion-item>
+  <ion-card *ngFor="let restaurante of restaurantes">
+    <img [src]="restaurante.imagenes[0]">
+    <div>{{ restaurante.nombre }}</div>
+    <div>{{ restaurante.rating }} estrellas</div>
+  </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab color="primary" [navPush]="agregarRestaurantePage">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
